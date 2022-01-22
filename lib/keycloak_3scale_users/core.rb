@@ -215,7 +215,8 @@ module Keycloak3scaleUsers
         puts ">> 3. Getting ids for all imported users to keyclock .."
         base_url = instance_variable_get :@keyclock_url
         realm = instance_variable_get :@keyclock_realm
-        endpoint = "/auth/admin/realms/#{realm}/users"
+        users_count = 1000 
+        endpoint = "/auth/admin/realms/#{realm}/users?count=#{users_count}"
 
         http = set_http_client URI.parse(base_url)
         headers = authenticate(generate_keycloak_bearer_token).merge({ "Content-Type" => "application/json" })
