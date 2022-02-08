@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "keycloak_3scale_users"
+
+Keycloak3scaleUsers::Core.run if __FILE__ == $0
