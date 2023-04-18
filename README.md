@@ -1,5 +1,6 @@
 # Keycloak 3scale Users Migration
 
+[![CI (build & test)](https://github.com/abarrak/3scale-keycloak-users-migration/actions/workflows/ci.yml/badge.svg)](https://github.com/abarrak/3scale-keycloak-users-migration/actions/workflows/ci.yml) [![Gem Version](https://badge.fury.io/rb/keycloak_3scale_users.svg)](https://badge.fury.io/rb/keycloak_3scale_users)
 
 ## Installation
 
@@ -19,7 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installation, use the binary to apply the migrate operation.
+
+Pass the required arguments as follows:
+
+```bash
+keycloak_3scale_users <3scale-api-base-url> <3scale-token> <keycloak-url> <keycloak-realm-name> <keyclock_client_id> <keyclock-admin-user> <keycloak-admin-password> <main-redirect-url>
+```
+
+(Poor's man positional only).
 
 ## Development
 
@@ -29,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/keycloak_3scale_users.
+Bug reports and pull requests are welcome on GitHub at https://github.com/abarrak/keycloak_3scale_users.
 
 
 ## License
