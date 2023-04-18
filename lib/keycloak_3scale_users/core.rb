@@ -215,7 +215,7 @@ module Keycloak3scaleUsers
         puts ">> 3. Getting ids for all imported users to keyclock .."
         base_url = instance_variable_get :@keyclock_url
         realm = instance_variable_get :@keyclock_realm
-        users_count = 1000 
+        users_count = 1000
         endpoint = "/auth/admin/realms/#{realm}/users?count=#{users_count}"
 
         http = set_http_client URI.parse(base_url)

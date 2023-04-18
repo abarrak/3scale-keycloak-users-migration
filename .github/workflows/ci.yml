@@ -1,0 +1,22 @@
+name: CI (build & test)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.0'
+      - name: Install dependencies
+        run: bundle install
+      - name: run tests suite
+        run: rspec
+
